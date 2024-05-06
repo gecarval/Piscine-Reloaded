@@ -6,7 +6,7 @@
 /*   By: gecarval <gecarval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 17:42:22 by gecarval          #+#    #+#             */
-/*   Updated: 2024/05/06 17:48:04 by gecarval         ###   ########.fr       */
+/*   Updated: 2024/05/06 17:48:45 by gecarval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strdup(char *src)
 	i = 0;
 	while (src[i])
 		i++;
-	dup = (int *)malloc(sizeof(int) * (i + 1));
+	dup = (char *)malloc(sizeof(char) * (i + 1));
 	if (!dup)
 		return (NULL);
 	i = -1;
