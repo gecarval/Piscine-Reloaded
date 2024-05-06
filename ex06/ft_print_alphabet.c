@@ -5,16 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gecarval <gecarval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/02 16:12:31 by gecarval          #+#    #+#             */
-/*   Updated: 2024/05/02 16:57:11 by gecarval         ###   ########.fr       */
+/*   Created: 2024/05/03 08:37:19 by gecarval          #+#    #+#             */
+/*   Updated: 2024/05/03 16:40:05 by gecarval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+void	ft_putchar(char c);
 
 void	ft_print_alphabet(void)
 {

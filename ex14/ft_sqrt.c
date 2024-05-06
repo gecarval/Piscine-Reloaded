@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gecarval <gecarval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/02 16:59:02 by gecarval          #+#    #+#             */
-/*   Updated: 2024/05/03 16:40:26 by gecarval         ###   ########.fr       */
+/*   Created: 2024/05/06 11:07:07 by gecarval          #+#    #+#             */
+/*   Updated: 2024/05/06 16:41:17 by gecarval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
-
-void	ft_print_numbers(void)
+int	ft_sqrt(int nb)
 {
-	char	i;
+	int	i;
 
-	i = '/';
-	while (++i <= '9')
-		ft_putchar(i);
+	i = 0;
+	while (++i <= nb)
+		if ((i * i) == nb)
+			return (i);
+	return (0);
 }

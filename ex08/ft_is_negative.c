@@ -6,17 +6,13 @@
 /*   By: gecarval <gecarval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 17:00:54 by gecarval          #+#    #+#             */
-/*   Updated: 2024/05/02 17:01:23 by gecarval         ###   ########.fr       */
+/*   Updated: 2024/05/03 16:46:36 by gecarval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+void	ft_putchar(char c);
 
-void	ft_is_negative(void)
+void	ft_is_negative(int n)
 {
 	if (n < 0)
 		ft_putchar('N');

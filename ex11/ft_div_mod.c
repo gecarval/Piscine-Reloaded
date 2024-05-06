@@ -6,10 +6,9 @@
 /*   By: gecarval <gecarval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 17:08:05 by gecarval          #+#    #+#             */
-/*   Updated: 2024/05/02 17:07:54 by gecarval         ###   ########.fr       */
+/*   Updated: 2024/05/03 16:47:01 by gecarval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
 
 void	ft_div_mod(int a, int b, int *div, int *mod)
 {

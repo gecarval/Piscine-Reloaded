@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gecarval <gecarval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/02 16:59:02 by gecarval          #+#    #+#             */
-/*   Updated: 2024/05/03 16:40:26 by gecarval         ###   ########.fr       */
+/*   Created: 2024/05/06 12:04:37 by gecarval          #+#    #+#             */
+/*   Updated: 2024/05/06 15:37:03 by gecarval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
-
-void	ft_print_numbers(void)
+int	ft_recursive_factorial(int nb)
 {
-	char	i;
-
-	i = '/';
-	while (++i <= '9')
-		ft_putchar(i);
+	if (nb == 0)
+		return (1);
+	if (nb < 0 || nb > 16)
+		return (0);
+	return (ft_recursive_factorial(nb - 1) * nb);
 }

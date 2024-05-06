@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gecarval <gecarval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/02 16:59:02 by gecarval          #+#    #+#             */
-/*   Updated: 2024/05/03 16:40:26 by gecarval         ###   ########.fr       */
+/*   Created: 2024/05/06 10:28:08 by gecarval          #+#    #+#             */
+/*   Updated: 2024/05/06 10:56:58 by gecarval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
+#include <unistd.h>
 
-void	ft_print_numbers(void)
+void	ft_putchar(char c)
 {
-	char	i;
-
-	i = '/';
-	while (++i <= '9')
-		ft_putchar(i);
+	write(1, &c, 1);
 }
