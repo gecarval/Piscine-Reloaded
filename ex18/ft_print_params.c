@@ -1,20 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
+/*   ft_print_params.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gecarval <gecarval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/06 09:17:56 by gecarval          #+#    #+#             */
-/*   Updated: 2024/05/06 17:04:08 by gecarval         ###   ########.fr       */
+/*   Created: 2024/05/06 17:40:09 by gecarval          #+#    #+#             */
+/*   Updated: 2024/05/06 17:40:33 by gecarval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_recursive_factorial(int nb)
+#include <unistd.h>
+
+void	ft_putchar(char h);
+
+int	main(int ac, char **av)
 {
-	if (nb == 0)
-		return (1);
-	if (nb < 0 || nb > 12)
-		return (0);
-	return (ft_recursive_factorial(nb - 1) * nb);
+	int	a;
+	int	b;
+
+	a = 1;
+	b = 0;
+	while (a < ac)
+	{
+		while (av[a][b])
+		{
+			ft_putchar(av[a][b]);
+			b++;
+		}
+		ft_putchar('\n');
+		b = 0;
+		a++;
+	}
+	return (0);
 }

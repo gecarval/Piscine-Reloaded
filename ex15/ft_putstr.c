@@ -6,15 +6,14 @@
 /*   By: gecarval <gecarval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 12:04:37 by gecarval          #+#    #+#             */
-/*   Updated: 2024/05/06 15:37:03 by gecarval         ###   ########.fr       */
+/*   Updated: 2024/05/06 17:37:26 by gecarval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_recursive_factorial(int nb)
+void	ft_putchar(char c);
+
+void	ft_putstr(char *str)
 {
-	if (nb == 0)
-		return (1);
-	if (nb < 0 || nb > 16)
-		return (0);
-	return (ft_recursive_factorial(nb - 1) * nb);
+	while (*str)
+		ft_putchar(*str++);
 }

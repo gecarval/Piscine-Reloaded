@@ -1,11 +1,11 @@
 CC = gcc
 EXEC = teste.exe
 CFLAGS = -Wall -Wextra -Werror
-EXER = ./ex14/
-RETURN = int
-PARAM = int nb
-PARAV = 5
-FUNC = ft_recursive_factorial
+EXER = ./ex15/
+RETURN = void
+PARAM = char *str
+PARAV = \"HELLO\"
+FUNC = ft_putstr
 PROT = ${RETURN} ${FUNC}(${PARAM});
 INC = ./includes/
 CFILES = ${EXER}*.c ${INC}ft_putchar.c

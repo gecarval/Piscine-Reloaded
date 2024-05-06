@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gecarval <gecarval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/06 09:17:56 by gecarval          #+#    #+#             */
-/*   Updated: 2024/05/06 17:04:08 by gecarval         ###   ########.fr       */
+/*   Created: 2024/05/06 17:39:02 by gecarval          #+#    #+#             */
+/*   Updated: 2024/05/06 17:39:11 by gecarval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_recursive_factorial(int nb)
+int	ft_strcmp(char *s1, char *s2)
 {
-	if (nb == 0)
-		return (1);
-	if (nb < 0 || nb > 12)
-		return (0);
-	return (ft_recursive_factorial(nb - 1) * nb);
+	int	i;
+
+	i = 0;
+	while ((s1[i] && s2[i]) && s1[i] == s2[i])
+		i++;
+	return (s1[i] - s2[i]);
 }
