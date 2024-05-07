@@ -1,33 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_range.c                                         :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gecarval <gecarval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/03 12:12:09 by gecarval          #+#    #+#             */
-/*   Updated: 2024/05/07 13:02:40 by gecarval         ###   ########.fr       */
+/*   Created: 2024/05/06 17:39:02 by gecarval          #+#    #+#             */
+/*   Updated: 2024/05/06 17:39:11 by gecarval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-int	*ft_range(int min, int max)
+int	ft_strcmp(char *s1, char *s2)
 {
 	int	i;
-	int	*result;
 
 	i = 0;
-	if (min >= max)
-		return (NULL);
-	result = (int *)malloc(sizeof(int) * (max - min));
-	if (!result)
-		return (NULL);
-	while (min < max)
-	{
-		result[i] = min;
-		min++;
+	while ((s1[i] && s2[i]) && s1[i] == s2[i])
 		i++;
-	}
-	return (result);
+	return (s1[i] - s2[i]);
 }
