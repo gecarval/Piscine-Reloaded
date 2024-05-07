@@ -6,16 +6,16 @@
 /*   By: gecarval <gecarval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 17:23:45 by gecarval          #+#    #+#             */
-/*   Updated: 2024/05/06 17:31:43 by gecarval         ###   ########.fr       */
+/*   Updated: 2024/05/07 17:52:40 by gecarval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strlen(char *str)
 {
-	int i;
+	int	i;
 
-    i = 0;
+	i = 0;
 	while (str[i])
-        i++;
+		i++;
 	return (i);
 }
