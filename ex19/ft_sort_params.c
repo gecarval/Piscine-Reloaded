@@ -6,7 +6,7 @@
 /*   By: gecarval <gecarval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 09:43:09 by gecarval          #+#    #+#             */
-/*   Updated: 2024/05/10 13:53:38 by gecarval         ###   ########.fr       */
+/*   Updated: 2024/05/10 14:25:09 by gecarval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,15 +37,6 @@ int	ft_strcmp(char *s1, char *s2)
 	return (s1[i] - s2[i]);
 }
 
-void	ft_swap(char **s1, char **s2)
-{
-	char *tmp;
-
-	tmp = *s1;
-	*s1 = *s2;
-	*s2 = tmp;
-}
-
 int	main(int argc, char **argv)
 {
 	int		i;
@@ -58,7 +49,9 @@ int	main(int argc, char **argv)
 		{
 			if (ft_strcmp(argv[i], argv[i + 1]) > 0 && (argv[i + 1]))
 			{
-				ft_swap(&argv[i], &argv[i + 1]);
+				tmp = argv[i];
+				argv[i] = argv[i + 1];
+				argv[i + 1] = tmp;
 				i = 0;
 			}
 			i++;
