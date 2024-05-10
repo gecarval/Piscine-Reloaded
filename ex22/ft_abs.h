@@ -6,11 +6,12 @@
 /*   By: gecarval <gecarval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 17:48:11 by gecarval          #+#    #+#             */
-/*   Updated: 2024/05/07 17:57:47 by gecarval         ###   ########.fr       */
+/*   Updated: 2024/05/08 12:17:59 by gecarval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_ABS_H
 # define FT_ABS_H
-# define ABS(Value) ((Value < 0) ? -Value : Value)
+# define ABS(Value) (Value < 0) ? -Value : Value
+
 #endif

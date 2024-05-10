@@ -6,11 +6,9 @@
 /*   By: gecarval <gecarval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 09:43:09 by gecarval          #+#    #+#             */
-/*   Updated: 2024/05/06 11:45:18 by gecarval         ###   ########.fr       */
+/*   Updated: 2024/05/10 11:33:02 by gecarval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 
 void	ft_putchar(char c);
 

@@ -6,13 +6,11 @@
 /*   By: gecarval <gecarval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 17:40:09 by gecarval          #+#    #+#             */
-/*   Updated: 2024/05/06 17:40:33 by gecarval         ###   ########.fr       */
+/*   Updated: 2024/05/10 11:38:04 by gecarval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char h);
+void	ft_putchar(char c);
 
 int	main(int ac, char **av)
 {

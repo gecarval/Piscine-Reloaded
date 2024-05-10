@@ -6,17 +6,17 @@
 /*   By: gecarval <gecarval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 17:57:56 by gecarval          #+#    #+#             */
-/*   Updated: 2024/05/07 17:57:57 by gecarval         ###   ########.fr       */
+/*   Updated: 2024/05/08 12:12:43 by gecarval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_POINT_H
 # define FT_POINT_H
 
-typedef struct	s_point
+typedef struct s_point
 {
-	int			x;
-	int			y;
-}				t_point;
+	int	x;
+	int	y;
+}t_point;
 
 #endif

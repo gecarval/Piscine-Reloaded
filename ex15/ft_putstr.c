@@ -6,7 +6,7 @@
 /*   By: gecarval <gecarval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 12:04:37 by gecarval          #+#    #+#             */
-/*   Updated: 2024/05/07 13:00:47 by gecarval         ###   ########.fr       */
+/*   Updated: 2024/05/10 11:44:12 by gecarval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@ void	ft_putchar(char c);
 
 void	ft_putstr(char *str)
 {
-	int	i;
-
-	i = 0;
-	while (str[i])
-		ft_putchar(str[i++]);
+	while (*str)
+		ft_putchar(*str++);
 }
