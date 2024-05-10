@@ -1,16 +1,18 @@
-NAME = ft_display_file
+CC = cc
+EXEC = ft_display_file
+CFLAGS = -Wall -Wextra -Werror
 SRC = ft_display_file.c
-FLAGS = -Wall -Wextra -Werror -o
+RM = rm -f
+OBJ = program
 
-all: $(NAME)
-
-$(NAME):
-	gcc $(FLAGS) $(NAME) $(SRC)
+all: $(SRC)
+    $(CC) -c $(SRC) -o $(OBJ)
+    $(CC) $(CFLAGS) $(OBJ) -o $(EXEC)
 
 clean:
-	/bin/rm -f *.o
+    $(RM) $(OBJ)
 
 fclean: clean
-	/bin/rm -f $(NAME)
+    $(RM) $(EXEC)
 
 re: fclean all

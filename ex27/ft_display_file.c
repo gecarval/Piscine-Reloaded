@@ -5,60 +5,51 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gecarval <gecarval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/10 14:08:25 by gecarval          #+#    #+#             */
-/*   Updated: 2024/05/10 14:08:27 by gecarval         ###   ########.fr       */
+/*   Created: 2024/05/10 14:34:16 by gecarval          #+#    #+#             */
+/*   Updated: 2024/05/10 14:36:08 by gecarval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <fcntl.h>
-#include <sys/types.h>
-#include <sys/uio.h>
 #include <unistd.h>
+#include <fcntl.h>
 
-#define BUF_SIZE 1024
-
-void	ft_putchar(char c)
+void	ft_putchar(char ch)
 {
-	write(1, &c, 1);
+	write(1, &ch, 1);
 }
 
 void	ft_putstr(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
-	while (str[i] != '\0')
-	{
-		ft_putchar(str[i]);
-		i++;
-	}
+	while (str[i])
+		write(1, &str[i++], 1);
 }
 
-int		main(int argc, char **argv)
+int	main(int argc, char *argv[])
 {
-	int		file_open;
-	int		buf_rec;
-	char	buffer[BUF_SIZE + 1];
+	int		fd;
+	char	ch;
 
+	fd = open(argv[1], O_RDONLY);
 	if (argc > 2)
-		write(1, "Too many arguments.\n", 20);
-	else if (argc == 1)
-		write(1, "File name missing.\n", 19);
-	else
 	{
-		file_open = open(argv[1], O_RDONLY);
-		if (file_open == -1)
-		{
-			write(1, "No file.\n", 9);
-		}
-		else
-		{
-			while ((buf_rec = read(file_open, buffer, BUF_SIZE)))
-			{
-				buffer[buf_rec] = '\0';
-				ft_putstr(buffer);
-			}
-		}
+		ft_putstr("Too many arguments.\n");
+		return (0);
 	}
+	else if (argc < 2)
+	{
+		ft_putstr("File name missing.\n");
+		return (0);
+	}
+	else if (fd == -1)
+	{
+		ft_putstr("Cannot read file.\n");
+		return (0);
+	}
+	while (read(fd, &ch, 1))
+		ft_putchar(ch);
+	close(fd);
 	return (0);
 }
