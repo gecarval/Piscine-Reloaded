@@ -5,60 +5,62 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gecarval <gecarval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/06 09:43:09 by gecarval          #+#    #+#             */
-/*   Updated: 2024/05/10 14:42:33 by gecarval         ###   ########.fr       */
+/*   Created: 2024/05/10 15:15:06 by gecarval          #+#    #+#             */
+/*   Updated: 2024/05/10 15:18:04 by gecarval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_putchar(char c);
-
-void	ft_print_vector(int argc, char **argv)
-{
-	int	i;
-	int	j;
-
-	i = 0;
-	while (++i < argc)
-	{
-		j = -1;
-		while (argv[i][++j])
-			ft_putchar(argv[i][j]);
-		ft_putchar('\n');
-	}
-}
 
 int	ft_strcmp(char *s1, char *s2)
 {
 	int	i;
 
 	i = 0;
-	while ((s1[i] && s2[i]) && s1[i] == s2[i])
+	while (s1[i] == s2[i] && (s1[i] && s2[i]))
 		i++;
 	return (s1[i] - s2[i]);
 }
 
-int	main(int argc, char **argv)
+int	ft_print_vector(int argc, char *argv[])
 {
-	int		i;
-	char	*tmp;
+	int	i;
+	int	j;
 
 	i = 1;
-	if (argc >= 2)
+	while (i < argc)
 	{
-		while (i < (argc - 1))
+		j = 0;
+		while (argv[i][j])
 		{
-			if (ft_strcmp(argv[i], argv[i + 1]) > 0 && (argv[i + 1]))
-			{
-				tmp = argv[i];
-				argv[i] = argv[i + 1];
-				argv[i + 1] = tmp;
-				i = 0;
-			}
-			i++;
+			ft_putchar(argv[i][j]);
+			j++;
 		}
-		ft_print_vector(argc, argv);
-	}
-	else
 		ft_putchar('\n');
+		i++;
+	}
+	return (0);
+}
+
+int	main(int argc, char *argv[])
+{
+	char	*tmp;
+	int		i;
+	int		j;
+
+	i = 1;
+	while (i < argc)
+	{
+		j = i;
+		while (ft_strcmp(argv[j], argv[j - 1]) < 0)
+		{
+			tmp = argv[j - 1];
+			argv[j - 1] = argv[j];
+			argv[j] = tmp;
+			j--;
+		}
+		i++;
+	}
+	ft_print_vector(argc, argv);
 	return (0);
 }

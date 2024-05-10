@@ -10,7 +10,7 @@ PARAM = int nb
 PRINT = %d
 PARAV = 268435456
 #--------------PATHS-----------------#
-EXER = ./ex14/
+EXER = ./ex23/
 INC = ./includes/
 PROT = ${RETURN} ${FUNC}(${PARAM});
 #--------------COMPILEOBJECTS-----------------#
